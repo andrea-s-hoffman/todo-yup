@@ -12,6 +12,7 @@ const ToDoForm = ({ onAdd }: Props) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<SchemaProps>({
     resolver: yupResolver(formSchema),
@@ -30,6 +31,7 @@ const ToDoForm = ({ onAdd }: Props) => {
       completed: false,
       dueDate: new Date(values.dueDate),
     });
+    reset();
   };
   return (
     <form className="ToDoForm" onSubmit={handleSubmit(yupSubmitHandler)}>

@@ -1,3 +1,4 @@
+/* resets */
 body,
 p,
 ol {
@@ -5,9 +6,36 @@ ol {
   padding: 0;
 }
 
+/* global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* App.css ------------------------------------------------*/
+
 .App {
   padding: 30px;
 }
+
+/* ToDoHome.css ------------------------------------------------*/
+
+.ToDoHome ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ToDoHome .priority-1 {
+  background-color: #bb4430;
+}
+.ToDoHome .priority-2 {
+  background-color: #d9aa1c;
+}
+.ToDoHome .priority-3 {
+  background-color: #489299;
+}
+
+/* ToDoForm.css ------------------------------------------------*/
 
 .ToDoForm {
   padding: 40px;
@@ -25,13 +53,16 @@ ol {
   padding: 10px 30px;
   margin-top: 20px;
   font-weight: bolder;
+  background-color: #efe6dd;
 }
 
-.ToDoHome ol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.ToDoForm .error {
+  color: #ff5335;
+  font-style: oblique;
+  margin: 5px 0 10px 0;
 }
+
+/* ToDoItem.css ------------------------------------------------ */
 
 .ToDoItem {
   margin: 10px;
@@ -51,20 +82,4 @@ ol {
   color: #fff;
   padding: 10px;
   border-radius: 20px;
-}
-
-.ToDoHome .priority-1 {
-  background-color: #bb4430;
-}
-.ToDoHome .priority-2 {
-  background-color: #d9aa1c;
-}
-.ToDoHome .priority-3 {
-  background-color: #489299;
-}
-
-.error {
-  color: #ff5335;
-  font-style: oblique;
-  margin: 5px 0 10px 0;
 }
